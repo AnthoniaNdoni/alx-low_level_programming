@@ -3,10 +3,10 @@
 
 /* betty style doc for function main goes there */
 /**
- *  main - Entry point
- *  Description:'printing all possible different combinations of two digits. '
- *  Return: Always 0 (Success)
-**/
+ * main - Entry point
+ * Description:'printing all possible different combinations of two digits. '
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int i, j, k;
@@ -16,22 +16,18 @@ int main(void)
 		for (j = i + 1 ; j < 9 ; j++)
 		{
 			for (k = j + 1 ; k < 10 ; k++)
-        
-       			{	
+			{
+				putchar(48 + i);
 				putchar(48 + j);
-	                        putchar(48 + j);
-                        	putchar(48 + k);
+				putchar(48 + k);
 				if (i != 7)
-				{	
-
-				      putchar(',');
-				      putchar(' ');
+				{
+					putchar(',');
+					putchar(' ');
 				}
-	
-                       }
+			}
 		}
-	}   	
-
+	}
 	putchar('\n');
 	return (0);
 }
