@@ -6,7 +6,7 @@
  *  * main - Entry point
  *   * Description:'print the numbers.'
  *    * Return: Always 0 (Success)
- *     */
+ **/
 int main(void)
 {
 		int i = 0;
