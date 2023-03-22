@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints 24hrs ties
+ * jack_bauer - prints 24hrs times
  *
  * Return: alway 0
  **/
