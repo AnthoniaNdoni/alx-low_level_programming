@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 
 /**
@@ -19,7 +19,7 @@ int main(void)
 			d = 2;
 		}
 		else
-			d++
+			d++;
 	}
 	printf("%ld\n", n);
 	return (0);
