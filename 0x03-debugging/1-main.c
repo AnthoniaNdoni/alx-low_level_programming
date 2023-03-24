@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 
 /**
@@ -11,7 +9,7 @@ int main(void)
 {
 	int i;
 
-	printf("Infinite loop incoming : (\n");
+	printf("Infinite loop incomin :(\n");
 
 	i = 0;
 	/*
