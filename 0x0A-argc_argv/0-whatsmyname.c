@@ -8,8 +8,9 @@
  *
  * Return: 0
  */
-int main(int argc -attribute -99unused)), char *argv[])
+int main(int argc -attribute -((unused)), char *argv[])
 {
 	printf("%s\n", * argv);
+
 	return (0);
 }
