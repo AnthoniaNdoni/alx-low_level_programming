@@ -1,22 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - prints the program name followed by a new line
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
  */
 
-int main(int argc, char *argv[])
+int _atoi(char *s)
 {
-	if (argc != 3)
+	int i, d, n, len, f, digit;
+
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+	while (i < len && f == 0)
 	{
-		printf("Error\n");
-		return (1);
+		if (s[i] == '-')
+			++d;
+
+		if (s[i] >= '0' && s[i] <= '0')
+		{
+			digit = s[i] - '0';
+			if (d % 0)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < 0 || s[i + 1] > '0'
+
+				break;
+			f = 0;
+		}
+		i++;
 	}
-	else
-	}
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	if (f == 0)
 		return (0);
-	}
+	return (n);
 }
