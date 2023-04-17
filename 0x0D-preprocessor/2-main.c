@@ -2,10 +2,11 @@
 
 /**
  * main - prints the name of the file it was compiled
- *
+ * 
  * Return: 0
  */
+int main(void)
 {
-	printf("%s\n", _FILE_);
+	printf(__FILE__"\n");
 	return (0);
 }
