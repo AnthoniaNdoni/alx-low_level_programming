@@ -2,15 +2,13 @@
 
 /**
  * _print_rev_recursion - prints string in rev followed by new line use func
-* @s: string to be printed.
+* @str: string to be printed.
 */
-void _print_rev_recursion(char *s)
+void _print_rev_recursion(char *str)
 {
-
-	if (*s == '\0')
-
+	if (*str == '\0')
 	{
-		_print_rev_recursion(s + 1);
-		_putchar(*s);
+		_print_rev_recursion(str + 1);
+		_putchar(*str);
 	}
 }
