@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
  * main - program that print its name followed by a line
