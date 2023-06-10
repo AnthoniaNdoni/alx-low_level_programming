@@ -4,48 +4,41 @@
 #include <string.h>
 
 /**
- * checkNum - checks if a string contains only digits
- * @str: the string to be checked
+ * main - print the sum of argument positive no's
+ * @argc: argument count
+ * @argv: array of argument
  *
- * Return: 1 if the string contains only digits, 0 otherwise
+ * Return: 0 Always
  */
-int checkNum(char *str)
-{
-	unsigned int count = 0;
-
-	while (count < strlen(str))
-	{
-	if (!isdigit(str[count]))
-	{
-	return (0);
-	}
-	count++;
-	}
-	return (1);
-}
-
 int main(int argc, char *argv[])
 {
-	int count;
-	int stringToInt;
-	int sum = 0;
-	
-	count = 1;
-	while (count < argc)
+	int i;
+	unsigned int j, sum = 0;
+	char *n;
+
+	if (argc > 1)
 	{
-	if (checkNum(argv[count]))
-	{
-	stringToInt = atoi(argv[count]);
-	sum += stringToInt;
+		for (i = 1; i < argc; i++)
+		{
+			n = argv[i];
+			for (j = 0; j < strlen(n); j++)
+			{
+				if (n[j] < 48 || n[j] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(n);
+			n++;
+		}
+		printf("%d\n", sum);
+
 	}
 	else
 	{
-	printf("Error: Non-digit input\n");
-	return (1);
-	}
-	count++;
+		printf("0\n");
 	}
 
-	printf("Sum: %d\n", sum);
 	return (0);
 }
