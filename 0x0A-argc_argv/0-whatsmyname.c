@@ -1,14 +1,17 @@
 #include <stdio.h>
+
 /**
- * main - program that print its name followed by a line
+ * main - print the program followed
  * @argc : the argument count
- * @argv : the argument victor
+ * @argv : array argument vector
  *
- * Return : zero
+ * description : print the return value
+ *
+ * Return : Alway 0 (success)
  */
 int main(int argc, char *argv[])
 {
-	if(argc <= 1)
-		printf("%s\n", argv[0]);
+	printf("%s\n", *argv);
+
 	return (0);
 }
