@@ -2,25 +2,24 @@
 #include <stdlib.h>
 
 /**
- * create_array - create an array and initilize it with a char
- * @size:  the size of array
- * @c: char to initialize the array
+ * create_array - create array of size 'size' and assign 'c' to each element
+ * @size: size of the array
+ * @c: character to assign
  *
- * Return: NULL or pointer to the array
+ * Return: pointer to the created array, NULL if failed
  */
-
 char *create_array(unsigned int size, char c)
 {
+	char *array;
 	unsigned int i;
-	char *arr;
 
-	if (size == 0)
+	array = malloc(sizeof(char) * size);
+	if (size == 0 || array == NULL)
 		return (NULL);
-	arr = malloc(sizeof(c) * size);
 
-	if (arr == NULL)
-		return (NULL);
 	for (i = 0; i < size; i++)
-		arr[i] = c;
-	return (arr);
+	{
+		array[i] = c;
+	}
+	return (array);
 }
